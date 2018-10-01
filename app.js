@@ -20,7 +20,7 @@ const quotesEndPoint= "https://andruxnet-random-famous-quotes.p.mashape.com/?cat
 			if(l >=3 && l<140)
 				{
 					T.post('statuses/update',{ status: quote}, function(err,tweet,res){
-					if(err) throw err;
+					if(err) console.log(err);
 					console.log(`Tweeted '${quote}' on -${tweet.created_at}`);
 					});		   		
 				}
