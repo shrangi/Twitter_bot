@@ -11,7 +11,7 @@ const quotesEndPoint= "https://andruxnet-random-famous-quotes.p.mashape.com/?cat
 
  function postQuote(){
 	 unirest.get(quotesEndPoint)
-		.header("X-Mashape-Key", "y9IKXJihmdmsh8Ym36Q61ybij0PXp11vn2xjsnOgNxhSBY0P7F")
+		.header("X-Mashape-Key", process.env.API_KEY)
 		.header("Accept", "application/json")
 		.end(function (result) {
 			var quote =  result.body[0].quote; 
