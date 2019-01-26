@@ -15,7 +15,7 @@ const quotesEndPoint= "https://andruxnet-random-famous-quotes.p.mashape.com/?cat
 		.header("Accept", "application/json")
 		.end(function (result) {
 			var quote =  result.body[0].quote; 
-			quote = quote + ' #famous #quote'
+		       //deleted hashtag
 			let l =  quote.length
 			if(l >=3 && l<140)
 				{
